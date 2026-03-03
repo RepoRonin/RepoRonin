@@ -8,6 +8,10 @@
   PR: https://github.com/openfga/openfga/pull/2951  
   Enabled dynamic TLS certificate reloading for the HTTP gateway’s internal gRPC client, preventing API failures during cert rotation and improving production reliability.
 
+- **keycloak/keycloak** — Fix token_type_hint injection in TokenIntrospectionEndpoint  
+  PR: https://github.com/keycloak/keycloak/pull/46752  
+  Eliminated reflected user input in `token_type_hint` error responses to prevent log injection and information leakage, hardening the token introspection API against malicious input.
+
 - **kyverno/kyverno** — Deadlock prevention in `imageContext.Get`  
   PR: https://github.com/kyverno/kyverno/pull/15404  
   Prevented a read/write lock deadlock caused by an early return without releasing `RLock`, improving concurrency safety.
